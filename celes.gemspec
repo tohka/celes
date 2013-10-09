@@ -8,12 +8,13 @@ Gem::Specification.new do |gem|
   gem.version       = Celes::VERSION
   gem.authors       = ["Naoki Arita"]
   gem.email         = ["ToNaokiArita@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{A library for astronomical computing.}
+  gem.summary       = %q{A wrapper of the SOFA Library for Ruby.}
+  gem.homepage      = "http://tohka.github.com/celes/"
+  gem.extensions   << "ext/celes/extconf.rb"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  gem.require_paths = ["ext", "lib"]
 end
