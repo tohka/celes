@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["ToNaokiArita@gmail.com"]
   gem.description   = %q{A library for astronomical computing.}
   gem.summary       = %q{A wrapper of the SOFA Library for Ruby.}
+	gem.license       = "3-clause BSD"
   gem.homepage      = "http://tohka.github.com/celes/"
   gem.extensions   << "ext/celes/extconf.rb"
 
