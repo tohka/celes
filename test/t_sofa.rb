@@ -1,9 +1,19 @@
-#!/usr/local/bin/ruby
+#!/usr/bin/env ruby
 
+if RUBY_VERSION < "1.9.0"
+	require 'rubygems'
+end
 require 'celes'
 
 $verbose = false
 
+if RUBY_VERSION < "1.9.0"
+	class String
+		def ord
+			self[0]
+		end
+	end
+end
 
 
 def viv(value, ok_value, func, test)

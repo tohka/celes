@@ -2,6 +2,9 @@
 #include "sofam.h"
 #include "ruby.h"
 
+#ifndef DBL2NUM
+# define DBL2NUM(dbl) rb_float_new(dbl)
+#endif
 
 VALUE mCeles;
 ID id_status;
