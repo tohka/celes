@@ -6,6 +6,10 @@ The SOFA Library has many functions for astronomical computing. The original lib
 
 Celes is a derived work of the SOFA Library and includes original files in accordance with [the SOFA Software License](http://www.iausofa.org/tandc.html).
 
+## Dependencies
+
+Ruby 1.8.7 or later
+
 ## Licenses
 
 The 3-clause BSD License, the names of organizations of Article 3 have the IAU and the SOFA.
