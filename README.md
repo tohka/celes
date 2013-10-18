@@ -49,7 +49,8 @@ $ # create Makefile and do make
 $ ruby ./extconf.rb
 $ make
 $ 
-$ # you get celes_core.so
+$ ls *.so
+celes_core.so
 ```
 
 ## Usage
@@ -66,10 +67,10 @@ p Celes::utctai(2400000.5, 45678.9)
 
 Celes's documentation is unprepared, but Celes is based on the original SOFA Library.
 
-For example, to convert date of Gregorian Calendar into Julian Day.
+For example, to convert Gregorian Calendar date into Julian Date.
 
 ```c
-// in C
+// in C, using the SOFA Library
 #include <stdio.h>
 #include "sofa.h"
 #include "sofam.h"
@@ -88,7 +89,7 @@ if(status){
 ```
 
 ```ruby
-# in Ruby
+# in Ruby, using Celes
 require 'celes'
 
 begin
@@ -108,18 +109,18 @@ end
 ### Rules
 
 * basically, according to the original SOFA Library
-* methods' name are lower-case
+* functions' name are lower-case
 * a prefix <var>iau</var> or <var>iau_</var> is removed
-* some method which make argument replace value are named with <var>!</var>
+* some functions are bang functions, their arguments value are replaced and name are with '!'
   * <var>zp!</var>, <var>zr!</var>, <var>ir!</var>, <var>zpv!</var>, <var>rx!</var>, <var>ry!</var> and <var>rz!</var>
-  * non-bang methods are also provided, <var>zp</var>, <var>zr</var>, ...
+  * Celes has also non-bang functions, <var>zp</var>, <var>zr</var>, ...
 * arguments for output are removed
 * when they have multi returned values, return as array object
-* methods do not return status code
-* <var>Celes::status</var> gives a last status code
+* functions do not return status code
+* <var>Celes::status</var> returns a last status code
 * raise exception if status code implies error
 
-### Bang and non-bang methods
+### Bang and non-bang functions
 
 Methods for clearing a vector or a matrix, <var>zp!</var>, <var>zr!</var>, <var>ir!</var> and <var>zpv!</var>.
 
