@@ -189,7 +189,8 @@ int iauDat(int iy, int im, int id, double fd, double *deltat )
       { 1999,  1, 32.0       },
       { 2006,  1, 33.0       },
       { 2009,  1, 34.0       },
-      { 2012,  7, 35.0       }
+      { 2012,  7, 35.0       },
+      { 2015,  7, 36.0       }
    };
 
 /* Number of Delta(AT) changes */
